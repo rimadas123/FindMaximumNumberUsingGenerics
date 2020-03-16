@@ -30,4 +30,16 @@ public class MaximumNumber {
         }
         return max;
     }
+
+    //Calculate maximum string among 3 strings
+    public String maxString(String firstString, String secondString, String thirdString){
+        String max=firstString;
+        if(secondString.compareTo(max)>0){
+            max=secondString;
+        }
+        if(thirdString.compareTo(max)>0){
+            max=thirdString;
+        }
+        return max;
+    }
 }
