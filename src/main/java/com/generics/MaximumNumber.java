@@ -7,38 +7,14 @@ public class MaximumNumber {
         System.out.println("Welcome to find maximum number using generics");
     }
 
-    // Calculate maximum number of an integer
-    public Integer maxNumberInteger(Integer firstNumber,Integer secondNumber,Integer thirdNumber){
-        Integer max=firstNumber;
-        if(secondNumber.compareTo(max)>0){
-            max=secondNumber;
+    //given three arguments and compute maximum among them
+    public static <E extends Comparable<E>> E findMaximum(E first,E second,E third){
+        E max=first;
+        if(second.compareTo(max)>0){
+            max=second;
         }
-        if(thirdNumber.compareTo(max)>0){
-            max=thirdNumber;
-        }
-        return max;
-    }
-
-    //Calculate maximum number of floats
-    public Double maxNumberFloat(Double firstNumber,Double secondNumber,Double thirdNumber){
-        Double max=firstNumber;
-        if(secondNumber.compareTo(max)>0){
-            max=secondNumber;
-        }
-        if(thirdNumber.compareTo(max)>0){
-            max=thirdNumber;
-        }
-        return max;
-    }
-
-    //Calculate maximum string among 3 strings
-    public String maxString(String firstString, String secondString, String thirdString){
-        String max=firstString;
-        if(secondString.compareTo(max)>0){
-            max=secondString;
-        }
-        if(thirdString.compareTo(max)>0){
-            max=thirdString;
+        if(third.compareTo(max)>0){
+            max=third;
         }
         return max;
     }
