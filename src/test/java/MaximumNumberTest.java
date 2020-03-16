@@ -10,4 +10,10 @@ public class MaximumNumberTest {
         Integer result=maxNumber.maxNumberInteger(25,89,56);
         Assert.assertEquals((Integer)89,result);
     }
+
+    @Test
+    public void givenThreeFloats_FindMaximumNumber(){
+        Double result=maxNumber.maxNumberFloat(34.3,56.7,98.6);
+        Assert.assertEquals((Double) 98.6,result);
+    }
 }
