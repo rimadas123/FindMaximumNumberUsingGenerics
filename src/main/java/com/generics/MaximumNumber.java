@@ -38,6 +38,12 @@ public class MaximumNumber <E extends Comparable<E>> {
     //method that call another method internally
     public E findMaximum(){
         testMaximum =findMaximum(first,second,third);
+        printMaximum(testMaximum);
         return testMaximum;
+    }
+
+    //print the max value using generic method
+    public void printMaximum(E testMaximum){
+        System.out.println("Maximum value: "+testMaximum);
     }
 }
